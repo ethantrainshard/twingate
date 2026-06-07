@@ -1,0 +1,9 @@
+apiVersion: twingate.com/v1beta
+kind: TwingateConnector
+metadata:
+  name: my-connector
+  namespace: twingate
+spec:
+  # Auto update the connector image every day
+  imagePolicy:
+    schedule: "0 0 * * *"

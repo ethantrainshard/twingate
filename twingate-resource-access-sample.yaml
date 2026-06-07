@@ -1,0 +1,12 @@
+apiVersion: twingate.com/v1beta
+kind: TwingateResourceAccess
+metadata:
+  name: example-twingate-resource-access # A unique name for the resource access
+  namespace: <NAMESPACE>
+spec:
+  resourceRef:
+    name: EXAMPLE-twingate-resource-access # Reference to the TwingateResource
+    namespace: <NAMESPACE>
+    groupRef:
+      name: Everyone # Reference to the TwingateGroup
+      namespace: <NAMESPACE>

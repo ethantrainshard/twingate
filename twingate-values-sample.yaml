@@ -1,0 +1,15 @@
+twingateOperator:
+  apiKey: "<API KEY>"
+  network: "<NETWORK>"
+  remoteNetworkId: "<NETWORK ID>"
+
+kubernetes-access-gateway:
+  enabled: true  # Enable Gateway subchart
+  twingate:
+    network: <NETWORK>
+    resource:
+      # Annotate Gateway service as a Twingate resource
+      enabled: true
+      extraAnnotations:
+        resource.twingate.com/name: "<RESOURCE NAME>"
+        resource.twingate.com/alias: "<RESOURCE ALIAS>"
